@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $city-lights;
+}
+
+.logo {
+  width: 125px;
+}
+
+.input {
+  width: 100%;
+  background-color: $white;
+  color: $prestige-blue;
+  border: none;
+  outline: none;
+  padding: 7px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: $prestige-blue;
+  color: $white;
+  border: none;
+  padding: 7px 14px;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+
+  &.sm {
+    padding: 5px 9px;
+  }
+
+  &.lg {
+    padding: 14px 28px;
+  }
+
+  &.primary {
+    background-color: $saturated-sky;
+    color: $white;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $cornflower-blue;
+    }
+  }
+
+  &.light {
+    background-color: $anti-flash-white;
+    color: $grisaille;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $grisaille;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    color: $twinkle-blue;
+    background-color: $grisaille;
+  }
+}
+
+.list {
+  width: 100%;
+  background-color: $anti-flash-white;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .list-item {
+    padding: 15px;
+    background-color: $anti-flash-white;
+    color: $prestige-blue;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $athens-gray;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: $twinkle-blue;
+      background-color: $grisaille;
+    }
+  }
+}
+
+.section {
+  background-color: $twinkle-blue;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.section-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 2px solid $bay-wharf;
+}

@@ -1,6 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Auth from './views/Auth.vue';
+import Conversations from './views/Conversations.vue';
+import Messaging from './views/Messaging.vue';
+import Contacts from './views/Contacts.vue';
 
 Vue.use(Router)
 
@@ -10,16 +13,29 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'auth',
+      component: Auth
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/conversations',
+      name: 'conversations',
+      component: Conversations
+    },
+    {
+      path: '/messaging',
+      name: 'messaging',
+      component: Messaging,
+      props: true
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: Contacts
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Contacts
     }
   ]
-})
+});
